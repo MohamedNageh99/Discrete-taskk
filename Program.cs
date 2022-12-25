@@ -1,35 +1,28 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Hello, World!");
+
 Console.WriteLine("enter first number");
-int n1 = int.Parse(Console.ReadLine());
+int num1 = int.Parse(Console.ReadLine());
 Console.WriteLine("enter second number");
-int n2 = int.Parse(Console.ReadLine());
-
-for(int z = n1;z<= n2;z++)
+int num2 = int.Parse(Console.ReadLine());
+for (int x = num1;x < num2;x++ )
 {
-    if (z<=1)
+    int z = the_output(x);
+    if (x==z)
     {
-        continue;
-    }
-    else
-    {
-        int y = 0;
-        for (int i = 2;i<z;i++)
-        {
-            if (z%i ==0)
-            {
-                y = 1;
-                break;
-            }
-                        
-        }
-        if(y==0)
-        {
-            Console.WriteLine(z);
-        }
-
-
-
+        Console.WriteLine(x);
     }
 }
+ static int the_output(int range)
+{
+    int all = 0;
+    for(int i=1;i<range;i++)
+    {
+        if (range%i==0)
+        {
+            all = all + i;
+        }
 
+    }
+    return all;
+}
